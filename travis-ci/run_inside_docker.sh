@@ -14,7 +14,7 @@ make
 # Validate
 set +x
 set +e
-find . -type f -name \*.adoc | \
+find . -type f -name \*.adoc -not -name \*_Frag.adoc | \
     while read line; do
         html=${line%.adoc}.html
         ls -l "$html"
